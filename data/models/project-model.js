@@ -15,11 +15,9 @@ function findById(id) {
     .where({ id })
     .first()
     .then(async (project) => {
-      const project_id = project.id;
-
       // find tasks for project_id
       const tasks = await db("task")
-        .where({ project_id })
+        .where({ project_id: id })
         .select("id", "description", "notes", "completed");
 
       //find resources for project_id
