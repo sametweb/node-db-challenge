@@ -40,11 +40,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+`Relational database` is a specific data storing system where data is represented in tables (columns and rows)
+`SQL (Structured Query Language)` is the language to query against relational databases.
+
 - [ ] Why do tables need a `primary key`?
+
+For SQL to identify the data when querying. Without unique primary keys, database wouldn't know how to identify those records.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+It is called `foreign key`.
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+There needs to be another table to keep records of the relation between aforementioned two tables.
 
 ## Minimum Viable Product
 
@@ -53,15 +62,15 @@ Take the steps necessary to complete the project from scratch. Start by initiali
 Complete the following tasks:
 
 - [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
-  - [ ] a `project` can have multiple `tasks`.
-  - [ ] a `task` belongs to only one `project`.
-  - [ ] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
-  - [ ] the same `resource` can be used in multiple `projects`.
-  - [ ] when adding `projects` the client must provide a name, the description is optional.
-  - [ ] when adding `resources` the client must provide a name, the description is optional.
-  - [ ] when adding a `task` the client must provide a description, the notes are optional.
-  - [ ] when adding a `task` the client must provide the `id` of an existing project.
-  - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
+  - [x] a `project` can have multiple `tasks`.
+  - [x] a `task` belongs to only one `project`.
+  - [x] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
+  - [x] the same `resource` can be used in multiple `projects`.
+  - [x] when adding `projects` the client must provide a name, the description is optional.
+  - [x] when adding `resources` the client must provide a name, the description is optional.
+  - [x] when adding a `task` the client must provide a description, the notes are optional.
+  - [x] when adding a `task` the client must provide the `id` of an existing project.
+  - [x] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 - [ ] Build an API with endpoints for:
   - [ ] adding resources.
   - [ ] retrieving a list of resources.
